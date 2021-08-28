@@ -1,0 +1,28 @@
+include ../varriables/myPartners
+mixin partners(partnersIcons)
+        .partners
+            .container
+                if pageTitle == "homepage"
+                    .row.align-items-center.justify-content-center.g-lg-5.g-4
+                        - for (i = 0; i <= 4; i ++)
+                            .col-md.col-4
+                                img.w-75(src = partnersImg[i])
+                else
+                    .d-flex.text-center.flex-column
+                        h2 Our partners are happy
+                            br
+                            | and believe in us
+                        p.pb-5 
+                            |We make sure to do the best and accessible services
+                            br 
+                            |for our customers and partners.
+                        .row.justify-content-center.align-items-center.g-lg-5.g-4
+                            - for (i = 0; i <= 3; i ++)
+                                .col-lg-3.col-3
+                                    img.w-100(src = partnersImg[i])
+                            - for (i = 4; i <= 6; i ++)
+                                .col-lg-4.col-4
+                                    img.w-100(src = partnersImg[i])
+                            - for (i = 7; i <= 8; i ++)
+                                .col-lg-4.col-4
+                                    img.w-100(src = partnersImg[i])

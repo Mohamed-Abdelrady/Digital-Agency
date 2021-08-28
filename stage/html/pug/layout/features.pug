@@ -1,0 +1,16 @@
+.features.pb-3
+    .container  
+        if pageTitle =='homepage'
+            .row.align-items-center
+                +descBox(homePageDesc.icon)
+                .col-lg.ms-lg-3
+                    .row.g-4.mt-2
+                        +featureIcon(features.main,'col-lg-6 col-md-3 col-6')
+        else
+            .row.align-items-center.pt-5
+                +descBox(servicesDesc)
+                .col-lg-6.col-12.description
+                    .row.g-4.mt-2.mt-lg-0
+                        +featureIcon(features.main, 'col-lg-6 col-md-3 col-6')
+            .row.g-4.mt-1
+                +featureIcon(features.extra, 'col-md-3 col-6')

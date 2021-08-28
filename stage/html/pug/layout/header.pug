@@ -1,0 +1,31 @@
+if pageTitle == "homepage"
+    .headLine
+        .container
+            .row.g-0
+                .col.info 
+                    h2 Kallyas Creative
+                    h4 Digital Agency
+                    p  Our industry consultants help address your must challenging issues by providing strategies, financial, operantional, human capital and IT services.
+                    a(href="#") Video 5 Min
+                        i.fas.fa-play-circle
+                .col-5.d-none.d-lg-block
+                    .image
+                        img.w-100.h-100(src='img/homepage/header-right.jpg')
+                        div
+                            .logo
+else if pageTitle != 'homepage'
+    .headLine
+        .container
+            .d-flex.text-center.flex-column
+                h2.text-capitalize= `${pageTitle}`
+                case pageTitle 
+                    when "Our Services"
+                        p Our industry consultants help address your must challenging issues by providing strategies, financial, operantional, human capital and IT services.
+                    when "Our Clients"
+                        p We recognise our clients are the experts in their industry and we make sure to do the best use of their knowledge to mutually achieve our goals.
+                    when "About Us"
+                        p We are a digital content agency that tears through search data to find lucrative ranking opportunities we know you can capture. Then, we create content your competitors can’t match, with coverage they can only envy.
+                    when "Contact Us"
+                        p Feel like contacting us? Submit your queries here and we will get back to you as soon as possible.
+                    default
+                        p unkown page 404 error

@@ -1,0 +1,27 @@
+- var pageTitle = "About Us"
+include pug/mixins/descriptionBox
+include pug/mixins/myTeam
+include pug/mixins/testimonials
+doctype html
+html(lang="en")
+    head
+        include pug/structure/meta
+        include pug/structure/styles
+    body
+        .header
+            include pug/components/navbar
+            include pug/layout/header
+        .about-us.description
+            .container
+                .row.g-3 
+                    .col-lg-4
+                        h2= aboutDesc.title
+                        a(href="#")=aboutDesc.small
+                            i.fas.fa-long-arrow-alt-right
+                    .col
+                        each desc in aboutDesc.desc
+                            p= desc
+        include pug/layout/myTeam
+        include pug/layout/testimonials
+        include pug/layout/footer
+        include pug/structure/scripts

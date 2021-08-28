@@ -1,0 +1,25 @@
+.feature {
+  h3 {
+    @extend %secHeader;
+    font-size: 1.3rem;
+  }
+  p {
+    color: $pSecColor;
+  }
+  i {
+    text-align: center;
+    height: 70px;
+    width: 70px;
+    color: #fff;
+    line-height: 35px;
+    font-size: 35px;
+  }
+  @include media-breakpoint-only(md) {
+    h3 {
+      font-size: 1.2rem;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    text-align: center;
+  }
+}

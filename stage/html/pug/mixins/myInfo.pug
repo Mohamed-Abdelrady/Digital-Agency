@@ -1,0 +1,10 @@
+include ../varriables/myInfo
+mixin contactDetails(contact)
+    h3= `${contact.city}, ${contact.state}`
+    p= contact.street
+    span.d-block= contact.phone
+    span.d-block= contact.email
+    .social-media   
+        each socialMedia in contact.socialMedia
+            a(href=`${socialMedia[1]}`)
+                i.fab(class=`fa-${socialMedia[0]}`)

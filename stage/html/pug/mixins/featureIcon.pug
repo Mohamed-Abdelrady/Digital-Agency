@@ -1,0 +1,9 @@
+include ../varriables/myFeatures
+mixin featureIcon(features, col='col-6')
+    each feature in features
+        div(class=`feature ${col}`)
+            - const iconStyle = `background: ${feature.color}; box-shadow: 4px 7px 38px -1px ${feature.color};`
+            if feature.fs !== '' && feature.fs != undefined
+                i.fas(class=`py-3 mb-4 rounded-circle fa-${feature.fs} circle-icon` style = iconStyle)
+            h3.mb-3= feature.title
+            p=feature.desc

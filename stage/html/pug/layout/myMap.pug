@@ -1,0 +1,9 @@
+.my-map.text-center.container 
+    .row.g-0
+        .col-md.col-12
+            script(src="js/libs/google-map.min.js")
+            script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQrjv82JLZWWp-97rPlXDAhyYhmeNzWJw&callback=initMap")
+            #map.w-100
+        .col.text
+            .box
+                +contactDetails(contacts)

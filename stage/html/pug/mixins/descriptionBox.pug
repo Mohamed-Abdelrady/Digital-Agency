@@ -1,0 +1,12 @@
+include ../Varriables/descriptions
+mixin descBox(article)
+    .col-lg-6.col-12.description
+        h2= article.title
+        each desc in article.desc
+            p= desc
+        if Object.values(article,small).includes("Get Started")    
+            a.mainBg(href="#")=article.small
+                i.fas.fa-long-arrow-alt-right
+        else
+            a(href="#")=article.small
+                i.fas.fa-long-arrow-alt-right

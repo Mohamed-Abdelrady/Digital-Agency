@@ -1,0 +1,13 @@
+.partners {
+  padding: 50px 0;
+  @if $pageTitle != 'homepage' {
+    h2 {
+      @extend %secHeader;
+    }
+    p {
+      color: $pSecColor;
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+  }
+}

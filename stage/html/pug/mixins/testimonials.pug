@@ -1,0 +1,13 @@
+include ../varriables/myClients
+mixin tistimonials(myClients)
+    .carousel.slide#carouselExampleCaptions(data-bs-ride="carousel")
+        .carousel-inner
+            each client in myClients 
+                .carousel-item(class=`${client === myClients[0] ? 'active' : ''}`)
+                    .box
+                        .text 
+                            p= client.desc
+                            h5= client.name
+                            - for (i=0; i<= 5; i++)
+                                i.fas.fa-star.mr-1
+                        img(src=`img/ourclients/clients/${client.image}.jpg`)

@@ -1,0 +1,17 @@
+.description {
+  h2 {
+    @extend %borderHeader;
+  }
+  p {
+    color: $pSecColor;
+    margin: 20px 0;
+    line-height: 1.7;
+  }
+  a {
+    @include button($logoColor, $btnGradientBg);
+    padding-left: 0;
+    svg {
+      transform: translateY(8%);
+    }
+  }
+}

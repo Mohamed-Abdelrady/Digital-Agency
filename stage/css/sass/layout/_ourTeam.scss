@@ -1,0 +1,68 @@
+.about-us {
+  padding: 50px 0 20px;
+  h2 {
+    @extend %secHeader;
+  }
+}
+.our-team {
+  padding: 50px 0;
+  h2 {
+    @extend %secHeader;
+  }
+  p {
+    color: $pSecColor;
+    margin-bottom: 70px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 40px;
+    }
+  }
+  .card {
+    border-radius: 30px;
+    padding-bottom: 1%;
+    box-shadow: 0 0 10px 4px rgba($pSecColor, 0.9);
+    h5 {
+      @extend %secHeader;
+      font-size: 1.3rem;
+      margin: 0;
+    }
+  }
+  .last {
+    @include logo($headerMainColor);
+    background: $bgMainColor;
+    border-radius: 30px;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    box-shadow: 0 0 10px 4px rgba($pSecColor, 0.9);
+    .logo {
+      top: 30%;
+      left: 37%;
+      height: 50px;
+      width: 33px;
+    }
+    &:before {
+      content: '';
+      top: 30%;
+      left: 40%;
+      height: 50px;
+      width: 40px;
+    }
+    &:after {
+      position: absolute;
+      top: 30%;
+      left: 40%;
+      height: 50px;
+      width: 40px;
+    }
+    h4 {
+      color: $headerMainColor;
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      font-style: italic;
+      margin-top: 70px;
+    }
+  }
+}

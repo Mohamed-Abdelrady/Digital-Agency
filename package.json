@@ -1,0 +1,35 @@
+{
+  "name": "secproject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "kem",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-livereload": "^4.0.2",
+    "gulp-minify": "^3.1.0",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemap": "^1.0.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.35.2"
+  },
+  "browserslist": [
+    "last 5 versions",
+    "Chrome > 20",
+    "Firefox > 20",
+    "safari > 6",
+    "opera > 12",
+    "ie >= 6"
+  ],
+  "dependencies": {
+    "static-server": "^2.2.1"
+  },
+  "description": ""
+}

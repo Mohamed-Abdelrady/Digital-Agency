@@ -1,0 +1,38 @@
+@mixin logo($color: '#FFF') {
+  position: relative;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-left: 35px;
+  .logo {
+    position: absolute;
+    top: 5px;
+    left: -35px;
+    height: 30px;
+    width: 13px;
+    -webkit-clip-path: ellipse(56% 50%);
+    clip-path: ellipse(56% 50%);
+    background: $color;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: -32px;
+    height: 30px;
+    width: 20px;
+    background: $color;
+    -webkit-clip-path: ellipse(44% 50% at 51% 7%);
+    clip-path: ellipse(44% 50% at 51% 7%);
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: -32px;
+    height: 30px;
+    width: 20px;
+    background: $color;
+    -webkit-clip-path: ellipse(44% 50% at 51% 93%);
+    clip-path: ellipse(44% 50% at 51% 93%);
+  }
+}

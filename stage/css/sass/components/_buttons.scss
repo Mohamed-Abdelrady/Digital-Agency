@@ -1,0 +1,19 @@
+@mixin button($bg, $color) {
+  background: $bg;
+  @if $color == $btnGradientBg {
+    color: $bgMainColor;
+  } @else {
+    color: $color;
+  }
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 35px;
+  text-decoration: none;
+  i {
+    margin-left: 10px;
+    font-size: 20px;
+    padding-top: 3px;
+  }
+}

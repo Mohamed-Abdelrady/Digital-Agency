@@ -1,0 +1,23 @@
+- var pageTitle = "Our Clients"
+include pug/mixins/descriptionBox
+include pug/mixins/myPartners
+include pug/mixins/testimonials
+doctype html
+html(lang="en")
+    head
+        include pug/structure/meta
+        include pug/structure/styles
+    body
+        .header
+            include pug/components/navbar
+            include pug/layout/header
+        +partners(partnersImg)
+        .join-us.container
+            .row.align-items-center
+                +descBox(clientsDesc, 'order:1')
+                .col.order-first.order-lg-last
+                    .overlay.rounded-3.overflow-hidden.mb-4.mb-lg-0
+                        img.w-100(src="img/ourclients/be-part.jpg")
+        include pug/layout/testimonials
+        include pug/layout/footer
+        include pug/structure/scripts

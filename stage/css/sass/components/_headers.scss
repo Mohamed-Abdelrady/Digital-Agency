@@ -1,0 +1,35 @@
+%headerG {
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+%mainHeader {
+  @extend %headerG;
+  color: $headerMainColor;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 4.5rem;
+  @include media-breakpoint-down(md) {
+    font-size: 3rem;
+  }
+}
+%secHeader {
+  @extend %headerG;
+  color: $headerSecColor;
+  font-size: 2.6rem;
+  @include media-breakpoint-down(md) {
+    font-size: 1.8rem;
+  }
+}
+%borderHeader {
+  @extend %secHeader;
+  &:before {
+    content: '';
+    width: 8%;
+    height: 9.5px;
+    background: $bgMainColor;
+    display: block;
+    border-radius: 50px;
+    margin-bottom: 10px;
+  }
+}

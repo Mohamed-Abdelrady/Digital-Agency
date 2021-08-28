@@ -1,0 +1,21 @@
+- var pageTitle = "Contact Us"
+include pug/mixins/descriptionBox
+include pug/mixins/myInfo
+include pug/mixins/testimonials
+doctype html
+html(lang="en")
+    head
+        include pug/structure/meta
+        include pug/structure/styles
+    body
+        .header
+            include pug/components/navbar
+            include pug/layout/header
+        .form.text-center.container 
+                h2 Get in touch
+                p We take our commitment to our users seriously. If you need our help with your user account, have questions about how to use the platform or are experiencing technical difficulties, please do not hesitate to contact us.
+                include pug/components/form
+        include pug/layout/myMap
+        include pug/layout/testimonials
+        include pug/layout/footer
+        include pug/structure/scripts

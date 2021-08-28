@@ -1,0 +1,50 @@
+.form {
+  padding: 70px 0 50px;
+  h2 {
+    @extend %secHeader;
+  }
+  p {
+    color: $pSecColor;
+    line-height: 1.7;
+    margin-bottom: 50px;
+  }
+  form {
+    input,
+    textarea {
+      background: rgba($pSecColor, 0.15);
+      border: 0;
+      padding: 13px 20px;
+      border-radius: 20px;
+      color: $pSecColor;
+      &:focus {
+        outline: 0;
+      }
+      &::placeholder {
+        color: $pSecColor;
+      }
+    }
+    textarea {
+      height: 150px;
+      resize: none;
+    }
+    button {
+      @include button($btnGradientBg, $logoColor);
+      display: inline-block;
+      margin-left: auto;
+      width: 25%;
+      @include media-breakpoint-down(lg) {
+        width: 35%;
+      }
+      @include media-breakpoint-down(md) {
+        width: 45%;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 90%;
+        margin: {
+          right: auto;
+          left: auto;
+        }
+      }
+    }
+  }
+}

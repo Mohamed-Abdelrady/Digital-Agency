@@ -1,0 +1,19 @@
+- var pageTitle = "Our Services"
+include pug/mixins/descriptionBox
+include pug/mixins/featureIcon
+include pug/mixins/myPlans
+include pug/mixins/testimonials
+doctype html
+html(lang="en")
+    head
+        include pug/structure/meta
+        include pug/structure/styles
+    body
+        .header
+            include pug/components/navbar
+            include pug/layout/header
+        include pug/layout/features
+        include pug/layout/plans
+        include pug/layout/testimonials
+        include pug/layout/footer
+        include pug/structure/scripts

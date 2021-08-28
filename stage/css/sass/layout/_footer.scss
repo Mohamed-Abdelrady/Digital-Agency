@@ -1,0 +1,27 @@
+.footer {
+  background: rgba($pSecColor, 0.13);
+  padding-top: 1rem;
+  margin-top: 40px;
+  color: $headerSecColor;
+  span a {
+    color: $headerSecColor;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    @include logo($headerSecColor);
+  }
+  li {
+    display: inline-block;
+    a {
+      color: $bgMainColor;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+  }
+  .copy {
+    background: $headerSecColor;
+    color: $logoColor;
+    padding: 18px 0;
+  }
+}

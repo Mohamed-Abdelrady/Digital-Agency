@@ -1,0 +1,21 @@
+nav.navbar-up.container
+    a.nav-logo.d-flex(href='homepage.html')
+        .logo
+        |Kallyas
+    .nav-parent
+        ul.nav-menu.list-unstyled
+            li.nav-item(class=`${pageTitle == "Our Services" ? "active" : ""}`)
+                a.nav-link(href='ourservices.html') Our Services
+            li.nav-item(class=`${pageTitle == "Our Clients" ? "active" : ""}`)
+                a.nav-link(href='ourclients.html') Our Clients
+            li.nav-item(class=`${pageTitle == "About Us" ? "active" : ""}`)
+                a.nav-link(href='aboutus.html') About Us
+            li.nav-item(class=`${pageTitle == "Contact Us" ? "active" : ""}`)
+                a.nav-link(href='contactus.html') Contact Us
+            a(href='#') 
+                |Get Started
+                i.fas.fa-long-arrow-alt-right
+    .bars
+        span.bar
+        span.bar
+        span.bar

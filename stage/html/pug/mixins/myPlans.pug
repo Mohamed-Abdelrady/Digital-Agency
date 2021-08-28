@@ -1,0 +1,13 @@
+include ../varriables/myPlans
+mixin plans(plans)
+    each plan in plans
+        .col-lg-4.col-md-6.col-7
+            .card.border-0(class=`${plan.best}`)
+                p= plan.price
+                    sub /Mth
+                h3.card-titleCard= plan.title
+                ul.list-unstyled.text-start 
+                    li= plan.features.first
+                    li= plan.features.sec
+                    li= plan.features.third
+                a.btn(href="#").d-inline-block Buy

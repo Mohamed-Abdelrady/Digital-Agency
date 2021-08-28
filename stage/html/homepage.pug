@@ -1,0 +1,36 @@
+- var pageTitle = "homepage"
+include pug/mixins/descriptionBox
+include pug/mixins/featureIcon
+include pug/mixins/myPartners
+include pug/mixins/myPlans
+include pug/mixins/testimonials
+doctype html
+html(lang="en")
+    head
+        include pug/structure/meta
+        include pug/structure/styles
+    body
+        .header
+            include pug/components/navbar
+            include pug/layout/header       
+        +partners(partnersImg)
+        include pug/layout/features
+        .article
+            .container.py-5
+                .row.box.align-items-center.g-4
+                    +descBox(homePageDesc.first)
+                    .col-lg.order-first
+                        .overlay.mb-2.mb-lg-0.rounded-3.overflow-hidden
+                            img.w-100(src="img/homepage/manage-mobile.jpg")
+        .article
+            .container.py-lg-5
+                .row.align-items-center.g-4
+                    +descBox(homePageDesc.sec)
+                    .col-lg.order-first.order-lg-last
+                        .overlay.mb-2.mb-lg-0.rounded-3.overflow-hidden
+                            img.w-100(src="img/homepage/plan-strategy.jpg")
+        include pug/layout/projects
+        include pug/layout/plans
+        include pug/layout/testimonials
+        include pug/layout/footer
+        include pug/structure/scripts

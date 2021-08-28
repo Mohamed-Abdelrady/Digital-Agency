@@ -1,0 +1,14 @@
+include ../varriables/myProjects
+.projects.text-center
+    .container 
+        h2 Our Projects
+        p 
+            |These are some images with the best projects we have done so far. There will be 
+            br
+            |many more coming in the near future.
+        .row.justify-content-center.g-4
+            each project in myProjects
+                .col-lg-4.col-6
+                    .images
+                        img.w-100(src= project.link)
+        a(href='#') View All

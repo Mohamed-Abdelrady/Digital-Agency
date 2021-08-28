@@ -1,0 +1,54 @@
+@import url('libs/brands.min.css');
+.my-map {
+  padding: 50px 0;
+  #map {
+    width: 100%;
+    background: $bgMainColor;
+    height: 400px;
+  }
+  .text {
+    background-image: url(../img/cover/mymap.jpg);
+    background-size: cover;
+    @extend %overlay;
+    color: $logoColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &:after {
+      z-index: 2;
+    }
+    .box {
+      z-index: 333;
+      @include media-breakpoint-down(md) {
+        padding: 30px 20px 40px;
+      }
+      h3 {
+        font-size: 3.4rem;
+        letter-spacing: 5px;
+        font-weight: 600;
+      }
+      p {
+        margin-bottom: 40px;
+      }
+      p,
+      span {
+        letter-spacing: -1px;
+        font-weight: 200;
+        font-size: 1.2rem;
+      }
+      .social-media {
+        i {
+          background-color: #fff;
+          border-radius: 50%;
+          height: 30px;
+          width: 30px;
+          line-height: 30px;
+          font-size: 17px;
+          color: $bgMainColor;
+          margin: 20px 8px 0;
+        }
+      }
+    }
+  }
+}
