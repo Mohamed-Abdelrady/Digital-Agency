@@ -34,27 +34,16 @@
     align-items: center;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     margin-left: 0;
     box-shadow: 0 0 10px 4px rgba($pSecColor, 0.9);
     .logo {
-      top: 30%;
-      left: 37%;
-      height: 50px;
-      width: 33px;
-    }
-    &:before {
-      content: '';
-      top: 30%;
-      left: 40%;
-      height: 50px;
-      width: 40px;
-    }
-    &:after {
-      position: absolute;
-      top: 30%;
-      left: 40%;
-      height: 50px;
-      width: 40px;
+      height: 120px;
+      width: 100px;
+      margin-right: 26px;
+      span {
+        right: -26px;
+      }
     }
     h4 {
       color: $headerMainColor;
@@ -62,7 +51,7 @@
       font-weight: 700;
       letter-spacing: 2px;
       font-style: italic;
-      margin-top: 70px;
+      margin: 0;
     }
   }
 }
