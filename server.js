@@ -1,6 +1,6 @@
 var StaticServer = require('static-server');
 var server = new StaticServer({
-  rootPath: './dist',
+  rootPath: './docs',
   port: 8000,
   templates: {
     index: 'ourclients.html', // optional, defaults to 'index.html'
