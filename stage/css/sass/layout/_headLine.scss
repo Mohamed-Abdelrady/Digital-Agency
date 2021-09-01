@@ -38,6 +38,9 @@
     }
     .image {
       border-radius: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       border: 15px solid #fff;
       @extend %overlay;
       z-index: 999;
@@ -46,26 +49,16 @@
       overflow: hidden;
       box-shadow: 0px 0px 14px 0px $pSecColor;
       div {
+        position: absolute;
         @include logo(#fff !important);
         z-index: 333;
-        top: -60%;
-        left: 39.5%;
-        margin-left: 0;
         .logo {
-          top: 0%;
-          left: 0%;
-          height: 70px;
-          width: 33px;
-        }
-        &:before,
-        &:after {
-          content: '';
-          left: 4%;
-          height: 65px;
-          width: 40px;
-        }
-        &:before {
-          top: 0;
+          height: 120px;
+          width: 100px;
+          margin-right: 26px;
+          span {
+            right: -26px;
+          }
         }
       }
       &:after {
