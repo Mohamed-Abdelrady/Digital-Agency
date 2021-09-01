@@ -16,7 +16,7 @@ gulp.task('html', function () {
         pretty: true,
       })
     )
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('docs'))
     .pipe(livereload());
 });
 
@@ -28,13 +28,13 @@ gulp.task('css', function () {
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(sourcemaps.write('./map'))
-    .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest('docs/css'))
     .pipe(livereload());
 });
 
 // JS Task
 gulp.task('js', function () {
-  return gulp.src('stage/js/*.js').pipe(concat('main.js')).pipe(minify()).pipe(gulp.dest('dist/js')).pipe(livereload());
+  return gulp.src('stage/js/*.js').pipe(concat('main.js')).pipe(minify()).pipe(gulp.dest('docs/js')).pipe(livereload());
 });
 
 // Watch Tasks
